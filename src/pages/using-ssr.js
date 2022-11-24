@@ -1,8 +1,8 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const UsingSSR = ({ serverData }) => {
   return (
@@ -38,7 +38,8 @@ export default UsingSSR
 
 export async function getServerData() {
   try {
-    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
+    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`);
+    console.log(res);
     if (!res.ok) {
       throw new Error(`Response failed`)
     }
